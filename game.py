@@ -26,7 +26,7 @@ tab_game_virgin = " __"+tab_position_possible[0]+"__|__"+tab_position_possible[1
 
 # choice_user = int(input('Choice your position between the disponibility number : '))
 # print(choice_user)
-# new_choice = [1, 2, 5, 6, 7, 9]
+#new_choice = [1, 2, 5, 6, 7, 9]
 # print(new_choice[:-2])
 # size_list = len(new_choice)-1
 # print(size_list)
@@ -196,10 +196,11 @@ while finish_game != True:
             # choice_machine = randint(0,8)
             # if choice_machine == choice_user :
             choice_machine = randint(0,8)
+            choice_machine = 6
             choice_machine = verification_choice_machine (choice_machine, choice_user)
             print(choice_machine)
-            print('The position of the machine is : {} '.format(choice_machine + 1))
-            tab_position_possible[choice_machine] = choice_machine_color
+            print('The position of the machine is : {} '.format(choice_machine))
+            tab_position_possible[choice_machine-1] = choice_machine_color
             #change round 
             count_round += 1
             print(count_round)

@@ -6,6 +6,8 @@ def choice_machine_fonction (new_choice, choice_user):
     size_list = len(new_choice)-1
     print(size_list)
     new_choice_machine = verification_analyse_causality(new_choice,choice_user)
+    while new_choice_machine == None :
+        new_choice_machine = verification_analyse_causality(new_choice,choice_user)
     print("hoo")
     print(new_choice_machine)
     print('ho')
@@ -20,7 +22,7 @@ def choice_machine_fonction (new_choice, choice_user):
 
 def verification_choice_machine (choice_machine, choice_user):
     print("choix machine {}".format(choice_machine))
-    if choice_machine == 1 :
+    if choice_machine == 1 or choice_machine == 0 :
         new_choice = [2, 3, 4, 5, 7, 9]
         new_choice = choice_machine_fonction (new_choice, choice_user)
         return new_choice

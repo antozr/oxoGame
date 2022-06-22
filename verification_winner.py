@@ -1,8 +1,9 @@
 
+from tab_print import print_tab
 
 
 
-def function_winner (tab_position_possible, winner,print_tab):
+def function_winner (tab_position_possible, winner):
     print(tab_position_possible)
     finish_game = True
     if winner == "machine" :
@@ -10,7 +11,7 @@ def function_winner (tab_position_possible, winner,print_tab):
     else :
         winner_tag = "toi"
     print("C'est {} qui a gagné!!! \n".format(winner_tag))
-    print_tab()
+    print_tab(tab_position_possible)
     return finish_game
 
 def winner (choice_machine_color,tab_position_possible, choice_user_color , print_tab) :

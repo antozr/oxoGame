@@ -57,6 +57,13 @@ def game_main(choice_machine_color, choice_user_color, tab_position_possible ):
                         choice_machine = randint(0,8)
                     if choice_machine == None :
                         choice_machine = verification_choice_machine (choice_machine, choice_user)
+                    if choice_machine == choice_user :
+                        choice_machine = randint(0,8)
+                        choice_machine = verification_choice_machine (choice_machine, choice_user)
+                        if choice_machine == None :
+                            choice_machine = randint(0,8)
+                        if choice_machine == None :
+                            choice_machine = verification_choice_machine (choice_machine, choice_user)
                     print('The position of the machine is : {} '.format(choice_machine))
                     tab_position_possible[choice_machine-1] = choice_machine_color
                     #change round 
@@ -82,6 +89,13 @@ def game_main(choice_machine_color, choice_user_color, tab_position_possible ):
                      choice_machine = randint(0,8)
                 if choice_machine == None :
                     choice_machine = verification_choice_machine (choice_machine, choice_user)
+                if choice_machine == choice_user :
+                    choice_machine = randint(0,8)
+                    choice_machine = verification_choice_machine (choice_machine, choice_user)
+                    if choice_machine == None :
+                     choice_machine = randint(0,8)
+                    if choice_machine == None :
+                        choice_machine = verification_choice_machine (choice_machine, choice_user)
                 print('The position of the machine is : {} '.format(choice_machine))
                 tab_position_possible[choice_machine-1] = choice_machine_color
                 #change round 

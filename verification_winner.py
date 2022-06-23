@@ -4,7 +4,7 @@ from tab_print import print_tab
 
 
 def function_winner (tab_position_possible, winner):
-    print(tab_position_possible)
+    #print(tab_position_possible)
     finish_game = True
     if winner == "machine" :
         winner_tag = "la machine"

@@ -12,8 +12,6 @@ def game_main(choice_machine_color, choice_user_color, tab_position_possible ):
     
     
     while finish_game == False:
-        # print(finish_game)
-        # print('cest fini ????????????????')
         if count_round == 0 :
             print('Your possibility is between 1 and 9 \n')
             choice_user = int(input('Choice your position between the disponibility number : '))
@@ -50,33 +48,27 @@ def game_main(choice_machine_color, choice_user_color, tab_position_possible ):
                 count_round == 3
             else :
                 choice_user = int(input('Choice your position between the disponibility number : '))
-            if choice_user >= 1 and choice_user <=9:
-                tab_position_possible[choice_user - 1] = choice_user_color
-                #machine time 
-                time.sleep(0.2)
-                choice_machine = randint(0,8)
-                print('geoo end round')
-                if choice_machine == None :
-                     choice_machine = randint(0,8)
-                if choice_machine == None :
-                    choice_machine = verification_choice_machine (choice_machine, choice_user)
-                
-                print('geoo2')
-                print(choice_machine)
-                print('The position of the machine is : {} '.format(choice_machine))
-                tab_position_possible[choice_machine-1] = choice_machine_color
-                #change round 
-                count_round == 4
-                print("We are in second round.{}".format(count_round))
-                print(count_round)
-                print('tourn numéro')
-                #création du tableau à chaque tours 
-                print_tab(tab_position_possible)
-                print(tab_position_possible[0:3])
-                print(tab_position_possible)
-            else : 
-                print('The position dispinible is : '+len(tab_position_possible))
-                choice_user = int(input('Choice your position between the disponibility number : '))
+                if choice_user >= 1 and choice_user <=9:
+                    tab_position_possible[choice_user - 1] = choice_user_color
+                    #machine time 
+                    time.sleep(0.2)
+                    choice_machine = randint(0,8)
+                    if choice_machine == None :
+                        choice_machine = randint(0,8)
+                    if choice_machine == None :
+                        choice_machine = verification_choice_machine (choice_machine, choice_user)
+                    print('The position of the machine is : {} '.format(choice_machine))
+                    tab_position_possible[choice_machine-1] = choice_machine_color
+                    #change round 
+                    count_round == 4
+                    print("We are in second round.{}".format(count_round))
+                    #création du tableau à chaque tours 
+                    print_tab(tab_position_possible)
+                    # print(tab_position_possible[0:3])
+                    # print(tab_position_possible)
+                else : 
+                    print('The position dispinible is : '+len(tab_position_possible))
+                    choice_user = int(input('Choice your position between the disponibility number : '))
                 
             
         elif count_round == 2 : 
@@ -86,25 +78,19 @@ def game_main(choice_machine_color, choice_user_color, tab_position_possible ):
                 #machine time 
                 time.sleep(0.2)
                 choice_machine = randint(0,8)
-                print('geoo')
                 if choice_machine == None :
                      choice_machine = randint(0,8)
                 if choice_machine == None :
                     choice_machine = verification_choice_machine (choice_machine, choice_user)
-                
-                print('geoo2')
-                print(choice_machine)
                 print('The position of the machine is : {} '.format(choice_machine))
                 tab_position_possible[choice_machine-1] = choice_machine_color
                 #change round 
                 count_round += 1
                 print("We are in second round.{}".format(count_round))
-                print(count_round)
-                print('tourn numéro')
                 #création du tableau à chaque tours 
                 print_tab(tab_position_possible)
-                print(tab_position_possible[0:3])
-                print(tab_position_possible)
+                # print(tab_position_possible[0:3])
+                # print(tab_position_possible)
             else : 
                 print('The position dispinible is : '+len(tab_position_possible))
                 choice_user = int(input('Choice your position between the disponibility number : '))
@@ -116,11 +102,7 @@ def game_main(choice_machine_color, choice_user_color, tab_position_possible ):
                 #machine time 
                 time.sleep(0.2)
                 choice_machine = randint(0,8)
-                print(choice_machine)
-                print('geoo')
                 choice_machine = verification_choice_machine (choice_machine, choice_user)
-                print('geoo2')
-                print(choice_machine)
                 if choice_machine == choice_user :
                     choice_machine = randint(0,8)
                     choice_machine = verification_choice_machine (choice_machine, choice_user)
@@ -129,8 +111,6 @@ def game_main(choice_machine_color, choice_user_color, tab_position_possible ):
                 #change round 
                 count_round += 1
                 print("We are in second round.")
-                print(count_round)
-                print('tourn numéro')
                 #création du tableau à chaque tours 
                 print_tab(tab_position_possible)
                 

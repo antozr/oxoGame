@@ -34,14 +34,14 @@ def game_main(choice_machine_color, choice_user_color, tab_position_possible ):
                 
         elif count_round == 4 :
             print('The game is end !!! \n The winner is ... ')
-            finish_game = winner (choice_machine_color,tab_position_possible, choice_user_color , print_tab)
+            finish_game = winner (choice_machine_color,tab_position_possible, choice_user_color , print_tab,count_round)
             print(finish_game)
             finish_game == True
             count_round == 4
            
         elif count_round == 3:
             # en attendant end
-            finish_game = winner (choice_machine_color,tab_position_possible, choice_user_color , print_tab)
+            finish_game = winner (choice_machine_color,tab_position_possible, choice_user_color , print_tab,count_round)
             print(finish_game)
             if finish_game == True :
                 print('YES THE GAME IS FINISH')

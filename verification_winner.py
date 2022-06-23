@@ -14,7 +14,7 @@ def function_winner (tab_position_possible, winner):
     print_tab(tab_position_possible)
     return finish_game
 
-def winner (choice_machine_color,tab_position_possible, choice_user_color , print_tab) :
+def winner (choice_machine_color,tab_position_possible, choice_user_color , print_tab, count_round) :
     if choice_machine_color in  tab_position_possible[0] and choice_machine_color in  tab_position_possible[1] and choice_machine_color in  tab_position_possible[2]:
         finish_game = function_winner(tab_position_possible, "machine")
         return finish_game
@@ -76,4 +76,8 @@ def winner (choice_machine_color,tab_position_possible, choice_user_color , prin
         finish_game = function_winner(tab_position_possible, "toi")
         return finish_game
     else :
-        print('C\'est pas encore fini')
+        if count_round == 3 :
+            print('One chance for win !!!')
+        else :
+            print('Nobody win, restart the game  !!!')
+        
